@@ -4,7 +4,7 @@ from kafka import KafkaProducer
 from tweepy import OAuthHandler
 from tweepy.streaming import StreamListener
 from tweepy import Stream
-
+#insert the credentials after creating a twitter developer account 
 consumer_key = ''
 consumer_secret = ''
 access_token = ''
@@ -22,6 +22,7 @@ class MyListener(StreamListener):
         self.producer = KafkaProducer(bootstrap_servers=['localhost:9092'])
 
     def on_data(self, data):
+        #create a topic in kafka before running this file
         self.producer.send("twitter", data.encode('utf-8'))
         print(data)
         return True
