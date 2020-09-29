@@ -1,5 +1,5 @@
 # TwitterSentimentAnalysis
-The project performs sentiment analysis of particular hashtags of real-time twitter data.
+The project performs sentiment analysis of real-time twitter data.
 ### Tech Stack:
 - Tweepy
 - Kafka
